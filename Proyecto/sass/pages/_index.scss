@@ -1,0 +1,16 @@
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.section-cards__header-titulo{
+	text-align: center;
+	color: #d72323;
+    margin-top: 10px;
+    margin-bottom: 20px;
+	text-shadow: 0 2px 2px #b8b8b8;
+}

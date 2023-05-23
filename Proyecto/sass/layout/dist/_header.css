@@ -1,0 +1,153 @@
+/***********************************
+             HEADER
+***********************************/
+.main-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding-top: 4px;
+  gap: 1rem;
+}
+.main-header figure {
+  margin-left: 20px;
+  height: 100%;
+}
+.main-header figure img {
+  max-width: 90%;
+  max-height: 100%;
+}
+.main-header #menu {
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+  height: auto;
+}
+.main-header #menu .fa-bars {
+  cursor: pointer;
+}
+@media (min-width: 991px) {
+  .main-header #menu {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .main-header {
+    height: 70px;
+  }
+  .main-header figure {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 900px) {
+  .main-header {
+    height: 100px;
+  }
+}
+
+.menu__desplegable {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #e98d8d;
+}
+.menu__desplegable ul {
+  text-align: center;
+  list-style: none;
+  /*previene el estilo por defecto*/
+}
+.menu__desplegable ul li .menu__desplegable-link {
+  font-weight: bold;
+  text-decoration: none;
+  /*previene el estilo por defecto*/
+  color: #d72323;
+  cursor: pointer;
+}
+
+/***********************************
+             NAV BAR
+***********************************/
+.nav-bar {
+  margin: 10px 0px;
+}
+.nav-bar__nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  list-style: none;
+  /*previene el estilo por defecto*/
+}
+@media (min-width: 1440px) {
+  .nav-bar__nav-list {
+    width: 70%;
+  }
+}
+@media (max-width: 1440px) {
+  .nav-bar__nav-list {
+    width: 80%;
+  }
+}
+.nav-bar__nav-link {
+  font-weight: bold;
+  text-decoration: none;
+  /*previene el estilo por defecto*/
+  color: #d72323;
+}
+@media (min-width: 1178px) {
+  .nav-bar {
+    margin-right: 70px;
+  }
+}
+
+/***********************************
+             SEARCH BAR
+***********************************/
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+  padding-right: 20px;
+}
+.search-bar__form-container {
+  width: 100%;
+}
+.search-bar__form-search {
+  width: 80%;
+  height: 36px;
+  border: 0px;
+  font-size: 15px;
+  padding-left: 7px;
+}
+.search-bar__form-search:hover {
+  border: 1px solid red;
+}
+.search-bar__form-search:focus {
+  border: 1px solid red;
+}
+.search-bar__form-submit {
+  cursor: pointer;
+  margin-left: 5px;
+  height: 36px;
+  border: 0px;
+  width: auto;
+}
+.search-bar__form-submit:hover {
+  color: red;
+}
+@media (min-width: 1200px) {
+  .search-bar {
+    height: 70px;
+  }
+  .search-bar figure {
+    margin-left: 100px;
+  }
+  .search-bar__carrito-container {
+    margin-right: 60px;
+  }
+}
