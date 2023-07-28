@@ -1,5 +1,4 @@
-import { useState } from "react";
-import productos from "../../assets/json/productos.json"
+import { useEffect, useState } from "react";
 import Card from "./Card"
 
 
@@ -10,6 +9,15 @@ function textoCard(producto){
 
 function Cards({busqueda}){
 
+    const [productos,setProductos] = useState([])
+
+    useEffect(()=>{
+        if (productos.length==0){
+            fetch('https://64c35bf9eb7fd5d6ebd0c5aa.mockapi.io/products')
+                .then(res => res.json())
+                .then(data => setProductos(data))
+        }
+    })
 
     let result = [];
 

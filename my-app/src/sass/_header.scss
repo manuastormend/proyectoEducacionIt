@@ -57,10 +57,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    // height: 100px;
     background-color: #e98d8d;
 
+
     ul{
+        padding: 10px 0px;
         text-align: center;
         list-style: none; /*previene el estilo por defecto*/
         li .menu__desplegable-link{
@@ -160,4 +162,8 @@
         }
     }
 
+    &__carrito-container{
+        color: #d72323;
+        cursor: pointer;
+    }
 }

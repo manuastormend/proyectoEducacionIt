@@ -7,6 +7,7 @@ import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Detalle from "./pages/Detalle";
 import "./main.scss";
+import Carrito from "./pages/Carrito";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/detalle/:id",
     element: <Detalle />,
+  },
+  {
+    path: "/cart",
+    element: <Carrito />,
   },
 
   {

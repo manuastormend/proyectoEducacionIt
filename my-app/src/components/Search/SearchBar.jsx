@@ -1,3 +1,4 @@
+import CartContainer from "../Cart/CartContainer";
 import Search from "./Search";
 
 function SearchBar(){
@@ -7,9 +8,7 @@ function SearchBar(){
                 <form className="search-bar__form-container">
                     <Search/>
                 </form>
-                <div className="search-bar__carrito-container">
-                    <i className="fas fa-shopping-cart fa-lg" ></i>
-                </div>
+                <CartContainer/>
             </div>
 }
 

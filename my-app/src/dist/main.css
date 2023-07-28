@@ -77,10 +77,10 @@ button a {
 .card {
   display: flex;
   height: 400px;
-  color: rgb(39, 39, 77);
+  color: #27274d;
 }
 .card:hover {
-  color: rgb(111, 111, 215);
+  color: #6f6fd7;
 }
 .card__image-container {
   width: 100%;
@@ -88,8 +88,7 @@ button a {
   box-sizing: border-box;
 }
 .card__image {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 250px;
 }
@@ -392,16 +391,18 @@ footer .footer-row .footer-column ul li:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100px;
   background-color: #e98d8d;
 }
 .menu__desplegable ul {
-  padding: 10px 0px;
   text-align: center;
-  list-style: none; /*previene el estilo por defecto*/
+  list-style: none;
+  /*previene el estilo por defecto*/
 }
 .menu__desplegable ul li .menu__desplegable-link {
   font-weight: bold;
-  text-decoration: none; /*previene el estilo por defecto*/
+  text-decoration: none;
+  /*previene el estilo por defecto*/
   color: #d72323;
   cursor: pointer;
 }
@@ -417,7 +418,8 @@ footer .footer-row .footer-column ul li:hover {
   flex-direction: row;
   justify-content: space-between;
   background-color: #f0f0f0;
-  list-style: none; /*previene el estilo por defecto*/
+  list-style: none;
+  /*previene el estilo por defecto*/
 }
 @media (min-width: 1440px) {
   .nav-bar__nav-list {
@@ -431,7 +433,8 @@ footer .footer-row .footer-column ul li:hover {
 }
 .nav-bar__nav-link {
   font-weight: bold;
-  text-decoration: none; /*previene el estilo por defecto*/
+  text-decoration: none;
+  /*previene el estilo por defecto*/
   color: #d72323;
 }
 @media (min-width: 1178px) {
@@ -487,10 +490,6 @@ footer .footer-row .footer-column ul li:hover {
   .search-bar__carrito-container {
     margin-right: 60px;
   }
-}
-.search-bar__carrito-container {
-  color: #d72323;
-  cursor: pointer;
 }
 
 .cards-container {
@@ -552,8 +551,7 @@ footer .footer-row .footer-column ul li:hover {
 .nosotros-article__container__persona .persona-img-container img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 827px) {
   .nosotros-article__container__persona .persona-img-container {
@@ -595,8 +593,7 @@ footer .footer-row .footer-column ul li:hover {
   width: 100%;
 }
 .detalle-layout-1 .detalle-container-left .detalle-imagen-container .detalle-imagen {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 600px;
 }
@@ -632,7 +629,7 @@ footer .footer-row .footer-column ul li:hover {
   margin-right: 100px;
   border: none;
   border-radius: 30px;
-  box-shadow: 0px 0px 1px 0.0008px rgb(112, 76, 76);
+  box-shadow: 0px 0px 1px 0.0008px #704c4c;
   padding: 15px;
   text-align: center;
 }
@@ -654,7 +651,7 @@ footer .footer-row .footer-column ul li:hover {
 }
 .detalle-layout-1 .detalle-container-right .detalle-precio span {
   font-size: 15px;
-  color: rgb(101, 160, 101);
+  color: #65a065;
 }
 .detalle-layout-1 .detalle-container-right .detalle-descripcion-container {
   height: 100px;
@@ -680,123 +677,110 @@ footer .footer-row .footer-column ul li:hover {
   cursor: pointer;
 }
 .detalle-layout-1 .detalle-container-right .detalle-botones .boton-comprar {
-  background-color: rgb(89, 89, 202);
+  background-color: #5959ca;
   border: none;
   color: white;
 }
 .detalle-layout-1 .detalle-container-right .detalle-botones .boton-agregarCarrito {
-  border: 1px solid rgb(89, 89, 202);
+  border: 1px solid #5959ca;
   margin-top: 3px;
-  color: rgb(89, 89, 202);
+  color: #5959ca;
 }
 
-.cart {
-  padding: 5rem;
-}
-@media (max-width: 767px) {
-  .cart {
-    padding: 10px 20px;
-  }
-}
-@media (max-width: 368px) {
-  .cart {
-    font-size: 14px;
-  }
-}
-.cart .product-article {
-  width: 100%;
+.card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #f0f0f0;
-  margin: 2rem 0px;
-  border-radius: 20px;
+  height: 400px;
+  color: #27274d;
 }
-@media (max-width: 991px) {
-  .cart .product-article {
-    flex-direction: column;
-  }
+.card:hover {
+  color: #6f6fd7;
 }
-@media (max-width: 767px) {
-  .cart .product-article {
-    margin: 0px;
-  }
+.card__image-container {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
 }
-.cart .product-article-img-container {
-  height: 250px;
-}
-.cart .product-article-img {
-  -o-object-fit: contain;
-     object-fit: contain;
+.card__image {
+  object-fit: cover;
   width: 100%;
   height: 250px;
-  padding: 1rem 2rem;
 }
-.cart .product-article-info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
+.card__heading {
+  font-size: 14px;
 }
-@media (max-width: 991px) {
-  .cart .product-article-info {
-    padding: 20px;
-  }
+.card__content {
+  text-align: center;
 }
-.cart .product-article-info .product-article-title {
-  padding: 0.5rem 0px;
-  color: #d72323;
-  font-weight: bold;
+.card__footer {
+  text-align: center;
 }
-.cart .product-article-info .product-article-precio span {
-  font-weight: bold;
-}
-.cart .product-article-info .product-article-cantidad input {
-  padding: 0.3rem;
-  width: 50px;
-}
-.cart .product-article-info .product-article-cantidad span {
-  margin-left: 10px;
-  color: #d72323;
-  font-weight: 300;
-}
-.cart .product-article .product-article-buttons {
+.card__article {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding: 7px 7px;
+  margin: 3px 5px;
 }
-@media (max-width: 991px) {
-  .cart .product-article .product-article-buttons {
-    flex-direction: row;
-    width: 60%;
+.card__article:hover {
+  box-shadow: rgba(255, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (min-width: 1200px) {
+  .card__image {
+    height: 200px;
+  }
+  .card__content {
+    height: 150px;
+    overflow: hidden;
+  }
+  .card__footer {
+    height: 50px;
   }
 }
-.cart .product-article .product-article-buttons .product-article-button {
-  width: 70%;
-  border: 1px solid #d72323;
-  border-radius: 100px;
-  padding: 10px 10px;
-  margin-bottom: 10px;
-  max-height: 100px;
-  text-align: center;
-  cursor: pointer;
-}
-@media (max-width: 991px) {
-  .cart .product-article .product-article-buttons .product-article-button {
-    margin: 0px 2px 10px 0px;
+@media (max-width: 1199px) and (min-width: 992px) {
+  .card {
+    /* Cards en escritorio mediano */
+    height: 500px;
+  }
+  .card__image {
+    height: 250px;
+  }
+  .card__content {
+    height: 200px;
+    overflow: hidden;
+  }
+  .card__footer {
+    height: 50px;
   }
 }
-.cart .product-article .product-article-buttons .product-article-button:hover {
-  background-color: #d7b7b7 !important;
+@media (max-width: 991px) and (min-width: 768px) {
+  .card__image {
+    height: 200px;
+  }
+  .card__content {
+    height: 150px;
+    overflow: hidden;
+  }
+  .card__footer {
+    height: 50px;
+  }
 }
-
-.cart-empty {
-  text-align: center;
-  margin: 75px 300px;
-  color: #d72323;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: italic;
+@media (max-width: 768px) and (min-width: 523px) {
+  .card {
+    width: 50% !important;
+  }
+}
+@media (max-width: 767px) {
+  .card__image {
+    height: 250px;
+  }
+  .card__description {
+    display: none;
+  }
+  .card__content {
+    height: 100px;
+  }
 }
 
 body {
@@ -815,42 +799,55 @@ PANTALLA DE ESCRITORIO GRANDE - LARGE (lg) - revisamos en portatil o pc
   .col-lg-12 {
     width: 100%;
   }
+
   .col-lg-11 {
     width: 91.66666667%;
   }
+
   .col-lg-10 {
     width: 83.33333333%;
   }
+
   .col-lg-9 {
     width: 75%;
   }
+
   .col-lg-8 {
     width: 66.66666667%;
   }
+
   .col-lg-7 {
     width: 58.33333333%;
   }
+
   .col-lg-6 {
     width: 50%;
   }
+
   .col-lg-5 {
     width: 41.66666667%;
   }
+
   .col-lg-4 {
     width: 33.33333333%;
   }
+
   .col-lg-3 {
     width: 25%;
   }
+
   .col-lg-2 {
     width: 16.66666667%;
   }
+
   .col-lg-1 {
     width: 8.33333333%;
   }
+
   .col-lg-0 {
     display: none;
   }
+
   main {
     max-width: 1440px;
     margin: auto;
@@ -863,39 +860,51 @@ PANTALLA DE ESCRITORIO MEDIANO - MEDIUM (md) - revisamos en tablet horizontal 10
   .col-md-12 {
     width: 100%;
   }
+
   .col-md-11 {
     width: 91.66666667%;
   }
+
   .col-md-10 {
     width: 83.33333333%;
   }
+
   .col-md-9 {
     width: 75%;
   }
+
   .col-md-8 {
     width: 66.66666667%;
   }
+
   .col-md-7 {
     width: 58.33333333%;
   }
+
   .col-md-6 {
     width: 50%;
   }
+
   .col-md-5 {
     width: 41.66666667%;
   }
+
   .col-md-4 {
     width: 33.33333333%;
   }
+
   .col-md-3 {
     width: 25%;
   }
+
   .col-md-2 {
     width: 16.66666667%;
   }
+
   .col-md-1 {
     width: 8.33333333%;
   }
+
   .col-md-0 {
     display: none;
   }
@@ -907,39 +916,51 @@ PANTALLA DE TABLET - SMALL (sm) - revisamos en tablet vertical 768px
   .col-sm-12 {
     width: 100%;
   }
+
   .col-sm-11 {
     width: 91.66666667%;
   }
+
   .col-sm-10 {
     width: 83.33333333%;
   }
+
   .col-sm-9 {
     width: 75%;
   }
+
   .col-sm-8 {
     width: 66.66666667%;
   }
+
   .col-sm-7 {
     width: 58.33333333%;
   }
+
   .col-sm-6 {
     width: 50%;
   }
+
   .col-sm-5 {
     width: 41.66666667%;
   }
+
   .col-sm-4 {
     width: 33.33333333%;
   }
+
   .col-sm-3 {
     width: 25%;
   }
+
   .col-sm-2 {
     width: 16.66666667%;
   }
+
   .col-sm-1 {
     width: 8.33333333%;
   }
+
   .col-sm-0 {
     display: none;
   }
@@ -951,39 +972,51 @@ PANTALLA DE PHONES - EXTRA SMALL (xs) - revisamos en movil horizontal 480px o ve
   .col-xs-12 {
     width: 100%;
   }
+
   .col-xs-11 {
     width: 91.66666667%;
   }
+
   .col-xs-10 {
     width: 83.33333333%;
   }
+
   .col-xs-9 {
     width: 75%;
   }
+
   .col-xs-8 {
     width: 66.66666667%;
   }
+
   .col-xs-7 {
     width: 58.33333333%;
   }
+
   .col-xs-6 {
     width: 50%;
   }
+
   .col-xs-5 {
     width: 41.66666667%;
   }
+
   .col-xs-4 {
     width: 33.33333333%;
   }
+
   .col-xs-3 {
     width: 25%;
   }
+
   .col-xs-2 {
     width: 16.66666667%;
   }
+
   .col-xs-1 {
     width: 8.33333333%;
   }
+
   .col-xs-0 {
     display: none;
   }
@@ -1008,4 +1041,4 @@ PANTALLA DE TABLET - SMALL
 =============================================*/
 /*=============================================
 PANTALLA DE PHONES - EXTRA SMALL 
-=============================================*//*# sourceMappingURL=main.css.map */
+=============================================*/

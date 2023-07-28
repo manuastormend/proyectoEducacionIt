@@ -1,7 +1,8 @@
 import { useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import ProductService from "../services/product.service";
-
+import { toast } from "react-toastify";
+import Toast from "../components/Toast/Toast";
 const Alta = () => {
 
 
@@ -13,13 +14,17 @@ const Alta = () => {
     const context = {
         
     }
+
+    function onclick(){
+        toast.info("Esta función no está desarrollada!")
+    }
     return <>
 
 
         <MainLayout>
 
             <div className="alta-form__div">
-                <form className="alta-form">
+                <form onSubmit={(e)=>e.preventDefault()}className="alta-form">
                     <h1 className="alta-form__title">DA DE ALTA UN PRODUCTO</h1>
                     <label>Nombre: </label>
                     <input className="alta-form__input" type="text"  placeholder=""></input>
@@ -68,9 +73,10 @@ const Alta = () => {
                     <br></br>
         
                     <label id="labelEnviar"></label>
-                    <button  className="alta-form__button"><a href="index.html">Enviar</a></button>
+                    <button  onClick={(e)=>onclick()} className="alta-form__button">Enviar</button>
                 </form>
             </div>
+            <Toast></Toast>
         </MainLayout>
         
     </>

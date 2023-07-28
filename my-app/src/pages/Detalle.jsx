@@ -1,7 +1,10 @@
 import { useParams } from "react-router";
 import MainLayout from "../layouts/MainLayout";
 import productos from "../assets/js/productos";
+import cartService from "../services/cart.service";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import Toast from "../components/Toast/Toast";
 
 
 function DetalleDescripcion({descripcion}){
@@ -24,6 +27,27 @@ const Detalle = () => {
     let cuota = Math.trunc(producto.precio/12) + 1
 
     const [cantidad,setCantidad] = useState(1);
+
+    function AgregarCarrito(){
+
+        if (cantidad >= 1){
+            cartService.add(id, cantidad)
+            let msg = ''
+            if (cantidad==1){
+                msg = `Se agregó 1 unidad de "${producto.nombre}" a tu carrito de compras!"`
+            }else{
+                msg = `Se agregaron ${cantidad} unidades de "${producto.nombre}" a tu carrito de compras!`
+            }
+            toast.success(msg)
+        }else{
+            toast.error("La cantidad de producto no puede ser menor a 1")
+        }
+
+    }
+
+    function Comprar(){
+        toast.info("Esta función no está desarrollada!")
+    }
 
     return <>
 
@@ -48,14 +72,15 @@ const Detalle = () => {
                         <DetalleDescripcion descripcion={producto.descripcion}></DetalleDescripcion>
                         
                         <div className="detalle-botones">
-                            <button className="boton-comprar">Comprar</button>
-                            <button className="boton-agregarCarrito">Agregar al carrito</button>
+                            <button onClick={Comprar} className="boton-comprar">Comprar</button>
+                            <button onClick={AgregarCarrito}className="boton-agregarCarrito">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
             </div>
-
+        
+            <Toast></Toast>
         </MainLayout>
     </>
 };

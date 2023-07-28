@@ -9,6 +9,7 @@ function MenuDesplegable(){
             <li><Link to={"/alta"} className="menu__desplegable-link"> ALTA </Link></li>
             <li><Link to={"/contacto"} className="menu__desplegable-link"> CONTACTO </Link></li>
             <li><Link to={"/nosotros"} className="menu__desplegable-link"> NOSOTROS </Link></li>
+            <li><Link to={"/cart"} className="menu__desplegable-link"> CARRITO ({localStorage.length}) </Link></li>
             </ul>
         </div>
 }
