@@ -32,14 +32,17 @@ function Cards({busqueda}){
     }
 
 
-
+    let titulo = "Tenemos lo que estás buscando."
     const listCards = result.map(producto => <Card key={producto.id} producto={producto}/>)
 
     return <>
 
         {result.length > 0 ? <section className="section-cards">
             <header className="section-cards__header">
-                <h1 className="section-cards__header-titulo">Tenemos lo que estás buscando.</h1>
+                <h1 className="section-cards__header-titulo">{titulo.toUpperCase()}</h1>
+                <div className="section-cards__header-img-container">
+                    <img src="./img/homepic.png"></img>
+                </div>
             </header>
         
             <div className="cards-container">{listCards}</div>

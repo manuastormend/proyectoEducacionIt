@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Fav from "../Fav/Fav";
 
 function Card({producto}){
 
-
+    let nav = useNavigate();
+    function onClick(){
+        nav(`/detalle/${producto.id}`)
+    }
     return <>
-        <Link to={`/detalle/${producto.id}`} className="card col-lg-2 col-md-3 col-sm-4 col-xs-12">
+        <div className="card">
             <article className="card__article">
-                <div className="card__image-container">
+                <div onClick={(e)=>onClick()} className="card__image-container">
                 <img
                     className="card__image"
                     src={`./img/productos/${producto.imagen}`}
@@ -14,18 +18,19 @@ function Card({producto}){
                 />
                 </div>
                 <div className="card__content">
-                <h2 className="card__heading">{producto.nombre}</h2>
-                <div className="card__description">
-                    <p>
-                    
-                    </p>
+                    <div className="card__headingfav">
+                        <h2 className="card__heading">{producto.nombre}</h2>
+                        <p className="card__fav"><Fav></Fav></p>
+                    </div>
+                    <p className="card__precio">US$ {producto.precio}</p>
                 </div>
-                </div>
-                <div className="card__footer">
-                    <p>US$ {producto.precio}</p>
-                </div>
+
+                
             </article>
-        </Link>
+
+        </div>
+            
+
     </>
 
 }

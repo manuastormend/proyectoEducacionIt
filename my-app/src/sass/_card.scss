@@ -1,21 +1,24 @@
 .card {
     display: flex;
-    height: 400px;
-    color:rgb(39, 39, 77);
+    height: 300px;
+    color:var(--main-violet);
+    border-radius: 10px;
 
-    &:hover{
-        color:rgb(111, 111, 215);
-    }
     &__image-container {
+        border-radius: 10px;
         width: 100%;
-        padding:5px;
-        box-sizing: border-box;
+        background-color: var(--main-grey);
+        cursor: pointer;
+        &:hover{
+            background-color: var(--main-yellow);
+        }
     }
 
     &__image {
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
         height: 250px;
+
     }
 
     &__heading{
@@ -24,7 +27,25 @@
     }
 
     &__content {
-        text-align: center;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0.4rem;
+        flex-direction: column;
+        gap: 0.4rem;
+        .card__headingfav{
+
+            display: flex;  
+
+            // .card__fav{
+
+            // }
+    
+            .card__heading{
+                margin-right: auto;
+            }
+        }
+
     }
 
     &__footer {
@@ -38,11 +59,8 @@
         justify-content: center;
         width: 100%;
         padding: 7px 7px;
-        margin: 3px 5px;
 
-        &:hover{
-            box-shadow: rgba(255, 0, 0, 0.24) 0px 3px 8px;
-        }
+
 
     }
     @media(min-width:1200px){
@@ -53,12 +71,8 @@
         }
     
         &__content{
-            height: 150px;
+            height: 100px;
             overflow: hidden;
-        }
-    
-        &__footer{
-            height: 50px;
         }
     
     }
@@ -68,7 +82,7 @@
     
         /* Cards en escritorio mediano */
         
-        height: 500px;
+        height: 350px;
         
     
         &__image{
@@ -76,13 +90,10 @@
         }
     
         &__content{
-            height: 200px;
+            height: 100px;
             overflow: hidden;
         }
     
-        &__footer{
-            height: 50px;
-        }
     
     }
     
@@ -99,33 +110,58 @@
             overflow: hidden;
         }
     
-        &__footer{
-            height: 50px;
-        }
-    }
-
-    @media(max-width:768px) and (min-width:523px){
-
-        width: 50% !important;
     }
 
     @media(max-width:767px){
 
     
- 
-    
+        height: 500px;
         &__image{
-            height: 250px;
-        }
-        &__description{
-            display: none;
+            height: 400px;
         }
         &__content{
             height: 100px;
         }
     
     }
-        
+    
+
+    /*=============================================
+PANTALLA DE ESCRITORIO GRANDE 
+=============================================*/
+
+@media(min-width:1200px){
+	width: 20%;
+}
+
+/*=============================================
+PANTALLA DE ESCRITORIO MEDIANO 
+=============================================*/
+
+@media(max-width:1199px) and (min-width:1400px){
+    width: 20%;
+}
+
+@media(max-width:1399px) and (min-width:992px){
+    width: 25%;
+}
+
+/*=============================================
+PANTALLA DE TABLET - SMALL 
+=============================================*/
+
+@media(max-width:991px) and (min-width:768px){
+    width: 50%;
+}
+
+/*=============================================
+PANTALLA DE PHONES - EXTRA SMALL 
+=============================================*/
+
+@media(max-width:767px){
+    width: 100%;
+}
+
     
 
 

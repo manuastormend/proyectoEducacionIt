@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: white;
     padding-top: 4px;
     gap: 1rem;
 
@@ -26,7 +26,7 @@
         justify-content: end;
         margin-right: 30px;
         height: auto;
-        color: #d72323;
+        color: var(--main-rustyred);
         cursor: pointer;
 
         .fa-bars{
@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: center;
     // height: 100px;
-    background-color: #e98d8d;
+    background-color: var(--main-violet);
 
 
     ul{
@@ -68,7 +68,7 @@
         li .menu__desplegable-link{
             font-weight: bold;
             text-decoration: none; /*previene el estilo por defecto*/
-            color: #d72323;
+            color: var(--main-grey);
             cursor: pointer;
         }
     }
@@ -86,7 +86,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #f0f0f0;
+        background-color: white;
         list-style: none;  /*previene el estilo por defecto*/
 
         @media(min-width:1440px){
@@ -101,7 +101,7 @@
     &__nav-link {
         font-weight: bold;
         text-decoration: none; /*previene el estilo por defecto*/
-        color: #d72323;
+        color: var(--main-rustyred);
     }
 
     @media(min-width:1178px){
@@ -135,10 +135,10 @@
         padding-left: 7px;
 
         &:hover{
-            border: 1px solid red;
+            border: 1px solid var(--main-rustyred);
         }
         &:focus{
-            border: 1px solid red;
+            border: 1px solid var(--main-rustyred);
         }
     }
     &__form-submit{
@@ -148,7 +148,7 @@
         border: 0px;
         width: auto;
         &:hover{
-            color: red;
+            color: var(--main-rustyred);
         }
 
     }
@@ -163,7 +163,7 @@
     }
 
     &__carrito-container{
-        color: #d72323;
+        color: var(--main-rustyred);
         cursor: pointer;
     }
 }
