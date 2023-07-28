@@ -1,3 +1,4 @@
+import { useState } from "react";
 import productos from "../../assets/json/productos.json"
 import Card from "./Card"
 
@@ -9,7 +10,7 @@ function textoCard(producto){
 
 function Cards({busqueda}){
 
-    
+
     let result = [];
 
     if (busqueda!=''){
@@ -20,6 +21,8 @@ function Cards({busqueda}){
     }else{
         result = productos;
     }
+
+
 
     const listCards = result.map(producto => <Card key={producto.id} producto={producto}/>)
 

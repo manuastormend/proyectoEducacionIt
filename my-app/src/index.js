@@ -29,6 +29,7 @@ const router = createBrowserRouter([
     path: "/detalle/:id",
     element: <Detalle />,
   },
+
   {
     fallbackElement: <Home />,
   },
