@@ -72,8 +72,8 @@ const Detalle = () => {
                         <DetalleDescripcion descripcion={producto.descripcion}></DetalleDescripcion>
                         
                         <div className="detalle-botones">
-                            <button onClick={Comprar} className="boton-comprar">Comprar</button>
-                            <button onClick={AgregarCarrito}className="boton-agregarCarrito">Agregar al carrito</button>
+                            <button onClick={Comprar} className="form__button form__button__violet">Comprar</button>
+                            <button onClick={AgregarCarrito}className="form__button form__button__greyviolet">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>

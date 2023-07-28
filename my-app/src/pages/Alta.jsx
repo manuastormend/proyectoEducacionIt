@@ -73,7 +73,7 @@ const Alta = () => {
                     <br></br>
         
                     <label id="labelEnviar"></label>
-                    <button  onClick={(e)=>onclick()} className="alta-form__button">Enviar</button>
+                    <button  className="form__button form__button__grey" onClick={(e)=>onclick()}>Enviar</button>
                 </form>
             </div>
             <Toast></Toast>

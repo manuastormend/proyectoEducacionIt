@@ -122,7 +122,7 @@ const Contacto = () => {
                             <br></br>
 
                             <label id="labelEnviar"></label>
-                            <button onClick={submited} className="alta-form__button"><a >Enviar</a></button>
+                            <button className="form__button form__button__grey" onClick={submited} >Enviar</button>
                         </form>
                     </div>
                 </div>
