@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./Card"
+import Preloader from "../Preloader/Preloader";
 
 
 function textoCard(producto){
@@ -35,14 +36,16 @@ function Cards({busqueda}){
     const listCards = result.map(producto => <Card key={producto.id} producto={producto}/>)
 
     return <>
-        <section className="section-cards">
+
+        {result.length > 0 ? <section className="section-cards">
             <header className="section-cards__header">
                 <h1 className="section-cards__header-titulo">Tenemos lo que estás buscando.</h1>
             </header>
         
             <div className="cards-container">{listCards}</div>
 
-        </section>
+        </section>: <Preloader></Preloader>}
+        
     </>
 
 }
