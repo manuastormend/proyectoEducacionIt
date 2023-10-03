@@ -6,6 +6,7 @@ import FormTextareaInput from "../components/Forms/FormTextareaInput";
 import FormSelectInput from "../components/Forms/FormSelectInput";
 import FormTextInput from "../components/Forms/FormTextInput";
 import ContactoContext from "../context/ContactoContext"
+import emailService from "../services/email.service";
 
 
 
@@ -71,14 +72,20 @@ const Contacto = () => {
             if (errorEmail || errorNombre || errorTelefono || errorTipoconsulta || errorConsulta){
                 toast.error("Su consulta no puede ser enviada debido a que tiene campos incompletos y/o inválidos")
             }else{
-    
-                toast.info("Enviado correctamente!");
-                setNombre(null)
-                setEmail(null)
-                setTelefono(null)
-                setConsulta(null)
-                setTipoconsulta(null)
-                setFirstSubmit(false)
+                emailService.new(nombre,email, telefono, tipoconsulta,consulta)
+                .then(res=>res.json())
+                .then(data=>{
+                    toast.info("Enviado correctamente!");
+                    setNombre(null)
+                    setEmail(null)
+                    setTelefono(null)
+                    setConsulta(null)
+                    setTipoconsulta(null)
+                    setFirstSubmit(false)
+                    
+                })
+                .catch(err=>console.log("err",err));
+                
             }
             setSubmit(false)
         }

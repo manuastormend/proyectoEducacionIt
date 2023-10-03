@@ -17,7 +17,7 @@ function FormSelectInput ({label, options, className, error, propiedad, ctxType}
     /////--------Error related---------//////
     function resolveError() {
         return new Promise(resolve => {
-            let error = validacionService.regexp(ctx[propiedad],propiedad)
+            let error = validacionService.regexp(ctx[propiedad],propiedad,ctxType)
             if (ctx.firstSubmit)
                 if (!error)
                     error = validacionService.obligatorio(ctx[propiedad],propiedad);
