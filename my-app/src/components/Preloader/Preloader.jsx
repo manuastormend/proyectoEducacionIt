@@ -2,7 +2,7 @@ import "../../assets/css/preloader.css"
 
 function Preloader(){
 
-    return <div class="preloader"><img src="./img/favicon.png" alt="preloader" /></div>
+    return <div className="preloader"><img src="./img/favicon.png" alt="preloader" /></div>
                 
 }
 

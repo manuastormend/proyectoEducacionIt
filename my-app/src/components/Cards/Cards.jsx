@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "./Card"
 import Preloader from "../Preloader/Preloader";
+import cardService from "../../services/card.service";
 
 
 function textoCard(producto){
@@ -10,15 +11,17 @@ function textoCard(producto){
 
 function Cards({busqueda}){
 
-    const [productos,setProductos] = useState([])
+    const [productos,setProductos] = useState([]);
+
 
     useEffect(()=>{
         if (productos.length==0){
-            fetch('https://64c35bf9eb7fd5d6ebd0c5aa.mockapi.io/products')
-                .then(res => res.json())
-                .then(data => setProductos(data))
+            const data = cardService.all()
+            data.then((data)=>{setProductos(data)})
+            
         }
-    })
+
+    },[])
 
     let result = [];
 
@@ -33,7 +36,7 @@ function Cards({busqueda}){
 
 
     let titulo = "Tenemos lo que estás buscando."
-    const listCards = result.map(producto => <Card key={producto.id} producto={producto}/>)
+    const listCards = result.map(producto => <Card key={producto.id} producto={producto} id={producto.id}/>)
 
     return <>
 

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Fav from "../Fav/Fav";
 
-function Card({producto}){
+function Card({producto,id}){
 
     let nav = useNavigate();
     function onClick(){

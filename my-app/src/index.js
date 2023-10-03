@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Alta from "./pages/Alta";
 import Nosotros from "./pages/Nosotros";
+import NosotrosCopy from "./pages/NosotrosCopy";
 import Contacto from "./pages/Contacto";
 import Detalle from "./pages/Detalle";
 import "./main.scss";
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/nosotros",
-    element: <Nosotros />,
+    element: <NosotrosCopy />,
   },
   {
     path: "/detalle/:id",
