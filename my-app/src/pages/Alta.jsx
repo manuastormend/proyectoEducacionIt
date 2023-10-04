@@ -74,8 +74,8 @@ const Alta = () => {
                     if (data.find((p) => p.id == identificador)) {
                         toast.error("Su consulta no puede ser enviada debido a que el identificador ya está siendo usado por otro producto")
                     }else{
-
-                        cardService.new(identificador,nombre,precio,descripcion,imagen,stock).then(res=>res.json()).then(data=>{
+                        
+                        cardService.new(identificador,nombre,precio,descripcion,"favicon.png",stock).then(res=>res.json()).then(data=>{
                             toast.info("Enviado correctamente!");
                             setNombre(null)
                             setIdentificador(null)
@@ -89,6 +89,7 @@ const Alta = () => {
                             setErrorPrecio(null)
                             setErrorImagen(null)
                             setErrorStock(null)
+                            setFirstSubmit(false)
                         }).catch(e=>console.error(e))
                         
                 
