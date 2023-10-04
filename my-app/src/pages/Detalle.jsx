@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
 import MainLayout from "../layouts/MainLayout";
-import productos from "../assets/js/productos";
+import cardService from "../services/card.service";
 import cartService from "../services/cart.service";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import Toast from "../components/Toast/Toast";
 
@@ -22,9 +22,24 @@ const Detalle = () => {
 
     let {id} = useParams();
 
-    let producto = productos.find((producto)=>producto.id == id);
-    let nombre = producto.nombre.toUpperCase()
-    let cuota = Math.trunc(producto.precio/12) + 1
+    const [producto,setProducto] = useState([]);
+    const [nombre, setNombre] = useState('')
+    const [cuota, setCuota] = useState('')
+
+    useEffect(()=>{
+        
+        const data = cardService.productId(id)
+        data.then((data)=>{
+ 
+            setProducto(data[0])
+            setNombre(data[0].nombre.toUpperCase())
+            setCuota(Math.trunc(data[0].precio/12) + 1)
+        })
+            
+        
+
+    },[])
+
 
     const [cantidad,setCantidad] = useState(1);
 

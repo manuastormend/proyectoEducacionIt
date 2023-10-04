@@ -10,6 +10,24 @@ const cardService = {
     return data;
   },
 
+  // new: async function (id, nombre, precio, descripcion, imagen, stock) {
+  //   return fetch(`http://localhost:5500/cards`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       id: id,
+  //       nombre: nombre,
+  //       imagen: imagen,
+  //       descripcion: descripcion,
+  //       alt: nombre + "producto",
+  //       precio: precio,
+  //       stock: stock,
+  //     }),
+  //   });
+  // },
+
   new: async function (id, nombre, precio, descripcion, imagen, stock) {
     return fetch(`http://localhost:5500/cards`, {
       method: "POST",
